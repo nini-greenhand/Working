@@ -12,6 +12,7 @@
 #import "HWTitleMenuViewController.h"
 #import "AFNetworking.h"
 #import "Account.h"
+#import "AccountTool.h"
 
 @interface WBHomeViewController () <QZDropdownMenuDelegate>
 
@@ -36,9 +37,26 @@
     
     //1、创建发送中心
     AFHTTPRequestOperationManager *mager = [AFHTTPRequestOperationManager manager];
+
     //2.拼接请求参数
+    Account *account = [AccountTool account];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = account.access_token;
+    params[@"uid"] = account.uid;
     
-  //  NSMutableDictionary *
+    [mager GET:@"https://api.weibo.com/2/users/show.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //设置标题
+            UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+        //设置名字
+            NSString *name = responseObject[@"name"];
+            [titleButton setTitle:name forState:UIControlStateNormal];
+        //存储到沙盒中
+            account.name = name;
+            [AccountTool saveaAccountTool:account];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"请求失败");
+    }];
     
 }
 
@@ -56,14 +74,16 @@
     titleButton.height = 30;
     
     //设置标题的文字
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    
+    NSString *name = [AccountTool account].name;
+    [titleButton setTitle:name? name:@"首页" forState:UIControlStateNormal];
     [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     //设置文字的粗体
     titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
     //设置边距
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 100, 0, 0);
     titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
     //标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];

@@ -43,6 +43,7 @@
 		467A5C081BDE1746000BF305 /* WBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 467A5C071BDE1746000BF305 /* WBSearchBar.m */; };
 		46BC88001BEC72F70054462F /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC87FF1BEC72F70054462F /* AccountTool.m */; };
 		46BC88031BEC8E080054462F /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC88021BEC8E080054462F /* UIWindow+Extension.m */; };
+		46BC88201BECB7B00054462F /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC881F1BECB7B00054462F /* Foundation+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		46BC87FF1BEC72F70054462F /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
 		46BC88011BEC8E070054462F /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		46BC88021BEC8E080054462F /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		46BC881F1BECB7B00054462F /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 		466C85F51BDC8656009C2BD7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				46BC881F1BECB7B00054462F /* Foundation+Log.m */,
 				466C85F61BDC8656009C2BD7 /* UIView+Extension.h */,
 				466C85F71BDC8656009C2BD7 /* UIView+Extension.m */,
 				466C861F1BDC952E009C2BD7 /* UIBarButtonItem+Extension.h */,
@@ -636,6 +639,7 @@
 				04CD8C801BE49B3B00D6B87B /* MBProgressHUD.m in Sources */,
 				4663EAD81BDF4A0C0014701A /* HWTitleMenuViewController.m in Sources */,
 				464FE3A41BE0E8A200A20866 /* WBNewfeatureController.m in Sources */,
+				46BC88201BECB7B00054462F /* Foundation+Log.m in Sources */,
 				4663EADB1BDF9A380014701A /* WBTabBar.m in Sources */,
 				04CD8C961BE49B4D00D6B87B /* AFHTTPRequestOperationManager.m in Sources */,
 				466C86191BDC8656009C2BD7 /* WBProfileViewController.m in Sources */,

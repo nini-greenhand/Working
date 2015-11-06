@@ -9,13 +9,15 @@
 #import "Account.h"
 
 @implementation Account
+//字典转模型
 +(instancetype)accountWithDict:(NSDictionary *)dict
 {
     Account *account = [[Account alloc]init];
     account.access_token = dict[@"access_token"];
     account.uid = dict[@"uid"];
     account.expires_in = dict[@"expires_in"];
-    
+    //获得账号存储时间
+    account.created_time = [NSDate date];
     return account;
 }
 /**
