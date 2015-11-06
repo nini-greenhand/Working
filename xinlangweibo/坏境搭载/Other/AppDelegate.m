@@ -11,6 +11,7 @@
 #import "WBNewfeatureController.h"
 #import "OAuthViewController.h"
 #import "Account.h"
+#import "AccountTool.h"
 #define RandonColor [UIColor colorWithRed: arc4random_uniform(256)/255.0 green: arc4random_uniform(256)/255.0 blue: arc4random_uniform(256)/255.0 alpha:1.0];
 @interface AppDelegate ()
 
@@ -25,13 +26,11 @@
     self.window = [[UIWindow alloc]init];
     self.window.frame = [[UIScreen mainScreen]bounds];
     
-    // 2.设置根控制器
+    //2.加载模型
     
-    // 沙盒路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:@"account.archive"];
-    Account *account = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    Account *account = [AccountTool account];
     
+    // 3.设置根控制器
     if (account) { // 之前已经登录成功过
         NSString *key = @"CFBundleVersion";
         // 上一次的使用版本（存储在沙盒中的版本号）

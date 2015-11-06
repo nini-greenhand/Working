@@ -12,6 +12,7 @@
 #import "Account.h"
 #import "WBNewfeatureController.h"
 #import "WBMainViewController.h"
+#import "AccountTool.h"
 
 #define AuthorizeBaseUrl @"https://api.weibo.com/oauth2/authorize"
 #define Client_id     @"3759665480"
@@ -109,18 +110,17 @@
     params[@"code"] = code;
     params[@"redirect_uri"] = Redirect_uri;
     
-    // 发送post请求
+    // 1,发送post请求
     [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary * responseObject) { // 请求成功的时候调用
-        //沙盒路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *path = [doc stringByAppendingPathComponent:doc];
-        // 将返回的账号字典数据 --> 模型，存进沙盒
+    
+    // 2,将返回的账号字典数据 --> 模型，存进沙盒
     Account *account = [Account accountWithDict:responseObject];
+    
+    //3,存储账号信息
+    [AccountTool saveaAccountTool:account];
+    
         
-        // 自定义对象的存储必须用NSKeyedArchiver，不再有什么writeToFile方法
-    [NSKeyedArchiver archiveRootObject:account toFile:path];
         
-
     NSString * key  = @"CFBundleVersion";
 
     //上一个版本

@@ -57,7 +57,7 @@
     content.x = 10;
     content.y = 15;
     //设置灰色的宽度
-    self.containerView.width = CGRectGetMaxX(content.frame) + 11;
+    self.containerView.width = CGRectGetMaxX(content.frame) + 8   ;
     // 设置灰色的高度
     self.containerView.height = CGRectGetMaxY(content.frame) + 10;
      // 添加内容到灰色图片中

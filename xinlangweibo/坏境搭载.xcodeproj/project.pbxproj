@@ -41,6 +41,7 @@
 		4676E9671BDA497F0004C3F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4676E9651BDA497F0004C3F5 /* LaunchScreen.xib */; };
 		4676E9731BDA497F0004C3F5 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4676E9721BDA497F0004C3F5 /* ____Tests.m */; };
 		467A5C081BDE1746000BF305 /* WBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 467A5C071BDE1746000BF305 /* WBSearchBar.m */; };
+		46BC88001BEC72F70054462F /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC87FF1BEC72F70054462F /* AccountTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,7 @@
 		4663EAD71BDF4A0C0014701A /* HWTitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTitleMenuViewController.m; sourceTree = "<group>"; };
 		4663EAD91BDF9A380014701A /* WBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTabBar.h; sourceTree = "<group>"; };
 		4663EADA1BDF9A380014701A /* WBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBar.m; sourceTree = "<group>"; };
-		4668F6F81BE207F700F08CA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4668F6F81BE207F700F08CA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Temp/Images.xcassets; sourceTree = "<group>"; };
 		466C85EA1BDC8656009C2BD7 /* WBDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBDiscoverViewController.h; sourceTree = "<group>"; };
 		466C85EB1BDC8656009C2BD7 /* WBDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBDiscoverViewController.m; sourceTree = "<group>"; };
 		466C85F61BDC8656009C2BD7 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -121,6 +122,8 @@
 		4676E9721BDA497F0004C3F5 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 		467A5C061BDE1746000BF305 /* WBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSearchBar.h; sourceTree = "<group>"; };
 		467A5C071BDE1746000BF305 /* WBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchBar.m; sourceTree = "<group>"; };
+		46BC87FE1BEC72F70054462F /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
+		46BC87FF1BEC72F70054462F /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,7 @@
 		04CD8C721BE479B600D6B87B /* OAuth(授权) */ = {
 			isa = PBXGroup;
 			children = (
+				46BC87FD1BEC72CA0054462F /* Tool */,
 				040602311BE6108D0025AF95 /* Model */,
 				04CD8C731BE479E200D6B87B /* Controlle */,
 			);
@@ -440,7 +444,6 @@
 		466C860E1BDC8656009C2BD7 /* Temp */ = {
 			isa = PBXGroup;
 			children = (
-				4668F6F81BE207F700F08CA5 /* Images.xcassets */,
 				466C860F1BDC8656009C2BD7 /* Test1ViewController.h */,
 				466C86101BDC8656009C2BD7 /* Test1ViewController.m */,
 				466C86111BDC8656009C2BD7 /* Test1ViewController.xib */,
@@ -471,6 +474,7 @@
 			children = (
 				4654F5DB1BDB630B0017A98A /* Classes */,
 				4676E9651BDA497F0004C3F5 /* LaunchScreen.xib */,
+				4668F6F81BE207F700F08CA5 /* Images.xcassets */,
 				4676E9561BDA497F0004C3F5 /* Supporting Files */,
 			);
 			path = "坏境搭载";
@@ -500,6 +504,15 @@
 				4676E9711BDA497F0004C3F5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46BC87FD1BEC72CA0054462F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				46BC87FE1BEC72F70054462F /* AccountTool.h */,
+				46BC87FF1BEC72F70054462F /* AccountTool.m */,
+			);
+			name = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +621,7 @@
 				04CD8C761BE47A2D00D6B87B /* OAuthViewController.m in Sources */,
 				466C86121BDC8656009C2BD7 /* WBDiscoverViewController.m in Sources */,
 				04CD8C9A1BE49B4D00D6B87B /* AFURLConnectionOperation.m in Sources */,
+				46BC88001BEC72F70054462F /* AccountTool.m in Sources */,
 				04CD8C991BE49B4D00D6B87B /* AFSecurityPolicy.m in Sources */,
 				466C86181BDC8656009C2BD7 /* AppDelegate.m in Sources */,
 				04CD8C971BE49B4D00D6B87B /* AFHTTPSessionManager.m in Sources */,

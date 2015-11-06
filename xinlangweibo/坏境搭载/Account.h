@@ -21,5 +21,10 @@
 /**　string	当前授权用户的UID。*/
 @property (nonatomic,copy) NSString * uid;
 
+/**　获取asston的时间 */
+@property (nonatomic,strong) NSDate * created_time;
+
+/**　用户的昵称 */
+@property (nonatomic,copy) NSString *name;
 +(instancetype)accountWithDict:(NSDictionary *)dict;
 @end

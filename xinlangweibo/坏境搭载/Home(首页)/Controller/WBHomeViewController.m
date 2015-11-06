@@ -10,6 +10,8 @@
 #import "UIBarButtonItem+Extension.h"
 #import "QZDropdownMenu.h"
 #import "HWTitleMenuViewController.h"
+#import "AFNetworking.h"
+#import "Account.h"
 
 @interface WBHomeViewController () <QZDropdownMenuDelegate>
 
@@ -19,11 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     /* 设置导航栏上面的内容 */
+    [self setupNav];
+    /* 获取用户的昵称*/
+    [self setupUserInfo];
+}
+
+
+- (void)setupUserInfo
+{
+    //https://api.weibo.com/2/users/show.json
+    //access_token	false	string	采用OAuth授权方式为必填参数，其他授权方式不需要此参数，OAuth授权后获得。
+    //uid	  false	 int64	需要查询的用户ID。
     
-      /* 设置导航栏上面的内容 */
+    //1、创建发送中心
+    AFHTTPRequestOperationManager *mager = [AFHTTPRequestOperationManager manager];
+    //2.拼接请求参数
+    
+  //  NSMutableDictionary *
+    
+}
+
+
+- (void)setupNav
+{
+    /* 设置导航栏上面的内容 */
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
-   
+    
     //中间的按钮的标题
     
     UIButton *titleButton = [[UIButton alloc]init];
@@ -48,6 +73,7 @@
     
 
 }
+
 - (void)titleClick:(UIButton *)titleButton
 {    //创建菜单
     QZDropdownMenu *menu = [QZDropdownMenu menu];
