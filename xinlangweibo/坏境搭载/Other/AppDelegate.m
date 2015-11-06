@@ -7,11 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "WBMainViewController.h"
-#import "WBNewfeatureController.h"
 #import "OAuthViewController.h"
 #import "Account.h"
 #import "AccountTool.h"
+#import "UIWindow+Extension.h"
 #define RandonColor [UIColor colorWithRed: arc4random_uniform(256)/255.0 green: arc4random_uniform(256)/255.0 blue: arc4random_uniform(256)/255.0 alpha:1.0];
 @interface AppDelegate ()
 
@@ -32,21 +31,7 @@
     
     // 3.设置根控制器
     if (account) { // 之前已经登录成功过
-        NSString *key = @"CFBundleVersion";
-        // 上一次的使用版本（存储在沙盒中的版本号）
-        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        // 当前软件的版本号（从Info.plist中获得）
-        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-        
-        if ([currentVersion isEqualToString:lastVersion]) { // 版本号相同：这次打开和上次打开的是同一个版本
-            self.window.rootViewController = [[WBMainViewController alloc] init];
-        } else { // 这次打开的版本和上一次不一样，显示新特性
-            self.window.rootViewController = [[WBNewfeatureController alloc] init];
-            
-            // 将当前的版本号存进沙盒
-            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
+        [self.window switchRootViewController];
     } else {
         self.window.rootViewController = [[OAuthViewController alloc] init];
     }

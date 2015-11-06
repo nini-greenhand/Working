@@ -10,9 +10,8 @@
 #import "MBProgressHUD+MJ.h"
 #import "AFNetworking.h"
 #import "Account.h"
-#import "WBNewfeatureController.h"
-#import "WBMainViewController.h"
 #import "AccountTool.h"
+#import "UIWindow+Extension.h"
 
 #define AuthorizeBaseUrl @"https://api.weibo.com/oauth2/authorize"
 #define Client_id     @"3759665480"
@@ -120,28 +119,10 @@
     [AccountTool saveaAccountTool:account];
     
         
-        
-    NSString * key  = @"CFBundleVersion";
-
-    //上一个版本
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-
-    //当前的版本号
-    NSString *curentVersion = [NSBundle mainBundle].infoDictionary[key];
-        
+    //4.切换控制器
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        
-        if ([curentVersion isEqualToString:lastVersion]) {// 版本号相同：这次打开和上次打开的是同一个版本
+    [window switchRootViewController];
 
-       window.rootViewController = [[WBMainViewController alloc]init];
-
-    }else{// 这次打开的版本和上一次不一样，显示新特性
-        window.rootViewController = [[WBNewfeatureController alloc]init];
-    }
-
-    //存储在沙盒内
-    [[NSUserDefaults standardUserDefaults] setObject:curentVersion forKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
        // NSLog(@"%@",responseObject);
         
         

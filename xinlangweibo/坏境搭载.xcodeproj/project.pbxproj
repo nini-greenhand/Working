@@ -42,6 +42,7 @@
 		4676E9731BDA497F0004C3F5 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4676E9721BDA497F0004C3F5 /* ____Tests.m */; };
 		467A5C081BDE1746000BF305 /* WBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 467A5C071BDE1746000BF305 /* WBSearchBar.m */; };
 		46BC88001BEC72F70054462F /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC87FF1BEC72F70054462F /* AccountTool.m */; };
+		46BC88031BEC8E080054462F /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC88021BEC8E080054462F /* UIWindow+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		467A5C071BDE1746000BF305 /* WBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchBar.m; sourceTree = "<group>"; };
 		46BC87FE1BEC72F70054462F /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
 		46BC87FF1BEC72F70054462F /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
+		46BC88011BEC8E070054462F /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
+		46BC88021BEC8E080054462F /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +333,8 @@
 				466C85F71BDC8656009C2BD7 /* UIView+Extension.m */,
 				466C861F1BDC952E009C2BD7 /* UIBarButtonItem+Extension.h */,
 				466C86201BDC952E009C2BD7 /* UIBarButtonItem+Extension.m */,
+				46BC88011BEC8E070054462F /* UIWindow+Extension.h */,
+				46BC88021BEC8E080054462F /* UIWindow+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 				466C86121BDC8656009C2BD7 /* WBDiscoverViewController.m in Sources */,
 				04CD8C9A1BE49B4D00D6B87B /* AFURLConnectionOperation.m in Sources */,
 				46BC88001BEC72F70054462F /* AccountTool.m in Sources */,
+				46BC88031BEC8E080054462F /* UIWindow+Extension.m in Sources */,
 				04CD8C991BE49B4D00D6B87B /* AFSecurityPolicy.m in Sources */,
 				466C86181BDC8656009C2BD7 /* AppDelegate.m in Sources */,
 				04CD8C971BE49B4D00D6B87B /* AFHTTPSessionManager.m in Sources */,
@@ -765,7 +771,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "坏境搭载/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -777,7 +783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "坏境搭载/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
