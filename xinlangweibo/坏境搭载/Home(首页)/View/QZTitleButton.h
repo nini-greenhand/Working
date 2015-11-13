@@ -1,5 +1,5 @@
 //
-//  UIWindow+Extension.h
+//  QZTitleButton.h
 //  坏境搭载
 //
 //  Created by uplooking on 15/11/6.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWindow (Extension)
-- (void)switchRootViewController;
+@interface QZTitleButton : UIButton
+
 @end
