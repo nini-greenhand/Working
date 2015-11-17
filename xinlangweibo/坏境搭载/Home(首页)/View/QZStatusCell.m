@@ -17,6 +17,8 @@
 #define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 // cell之间的间距
 #define HWStatusCellMargin 15
+#define HWStatusCellBorderW 10
+
 @interface QZStatusCell ()
 
 /* 原创微博 */
@@ -165,6 +167,7 @@
     /** 时间 */
     UILabel *timeLabel = [[UILabel alloc] init];
     timeLabel.font = HWStatusCellTimeFont;
+    timeLabel.textColor = [UIColor orangeColor];
     [originalView addSubview:timeLabel];
     self.timeLabel = timeLabel;
     
@@ -231,12 +234,24 @@
     self.nameLabel.frame = statusFrame.nameLabelF;
     
     /** 时间 */
-    self.timeLabel.text = status.created_at;
-    self.timeLabel.frame = statusFrame.timeLabelF;
+//    self.timeLabel.text = status.created_at;
+//    self.timeLabel.frame = statusFrame.timeLabelF;
+    NSString *time = status.created_at;
+    CGFloat timeX = statusFrame.nameLabelF.origin.x;
+    CGFloat timeY = CGRectGetMaxY(statusFrame.nameLabelF) + HWStatusCellBorderW;
+    CGSize timeSize = [time sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:12]}];
+    self.timeLabel.frame = (CGRect){{timeX, timeY}, timeSize};
+    self.timeLabel.text = time;
     
     /** 来源 */
+//    self.sourceLabel.text = status.source;
+//    self.sourceLabel.frame = statusFrame.sourceLabelF;
+    /** 来源 */
+    CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + HWStatusCellBorderW;
+    CGFloat sourceY = timeY;
+    CGSize sourceSize = [status.source sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:12]}];
+    self.sourceLabel.frame = (CGRect){{sourceX, sourceY}, sourceSize};
     self.sourceLabel.text = status.source;
-    self.sourceLabel.frame = statusFrame.sourceLabelF;
     
     /** 正文 */
     self.contentLabel.text = status.text;
