@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //1建立中心角色
+    //1建立中心
     CBCentralManager *manager;
     manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     
