@@ -74,6 +74,7 @@
 		4676E9671BDA497F0004C3F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4676E9651BDA497F0004C3F5 /* LaunchScreen.xib */; };
 		4676E9731BDA497F0004C3F5 /* weiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4676E9721BDA497F0004C3F5 /* weiboTests.m */; };
 		467A5C081BDE1746000BF305 /* WBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 467A5C071BDE1746000BF305 /* WBSearchBar.m */; };
+		468565ED1BFDDB4B008FE866 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 468565EC1BFDDB4B008FE866 /* NSString+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		4690A1691BF3538D00A1A7B8 /* QZStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4690A1681BF3538D00A1A7B8 /* QZStatusCell.m */; settings = {ASSET_TAGS = (); }; };
 		4690A16F1BF358AB00A1A7B8 /* QZStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4690A16E1BF358AB00A1A7B8 /* QZStatusFrame.m */; settings = {ASSET_TAGS = (); }; };
 		46BC88001BEC72F70054462F /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC87FF1BEC72F70054462F /* AccountTool.m */; };
@@ -228,6 +229,8 @@
 		4676E9721BDA497F0004C3F5 /* weiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weiboTests.m; sourceTree = "<group>"; };
 		467A5C061BDE1746000BF305 /* WBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSearchBar.h; sourceTree = "<group>"; };
 		467A5C071BDE1746000BF305 /* WBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSearchBar.m; sourceTree = "<group>"; };
+		468565EB1BFDDB4B008FE866 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		468565EC1BFDDB4B008FE866 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		4690A1671BF3538D00A1A7B8 /* QZStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZStatusCell.h; sourceTree = "<group>"; };
 		4690A1681BF3538D00A1A7B8 /* QZStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZStatusCell.m; sourceTree = "<group>"; };
 		4690A16D1BF358AB00A1A7B8 /* QZStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZStatusFrame.h; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 				46BC88021BEC8E080054462F /* UIWindow+Extension.m */,
 				46245E241BF5EB0F00746FD3 /* NSDate+Extension.h */,
 				46245E251BF5EB0F00746FD3 /* NSDate+Extension.m */,
+				468565EB1BFDDB4B008FE866 /* NSString+Extension.h */,
+				468565EC1BFDDB4B008FE866 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -848,6 +853,7 @@
 				04807AA51BEDDF12008F9C64 /* SDWebImageManager.m in Sources */,
 				466C86121BDC8656009C2BD7 /* WBDiscoverViewController.m in Sources */,
 				04CD8C9A1BE49B4D00D6B87B /* AFURLConnectionOperation.m in Sources */,
+				468565ED1BFDDB4B008FE866 /* NSString+Extension.m in Sources */,
 				46BC88001BEC72F70054462F /* AccountTool.m in Sources */,
 				04807AD61BEDEA88008F9C64 /* MJArgument.m in Sources */,
 				04807AA91BEDDF12008F9C64 /* UIImage+MultiFormat.m in Sources */,

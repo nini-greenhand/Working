@@ -243,8 +243,7 @@
     self.timeLabel.frame = (CGRect){{timeX, timeY}, timeSize};
     self.timeLabel.text = time;
     
-    /** 来源 */
-//    self.sourceLabel.text = status.source;
+ 
 //    self.sourceLabel.frame = statusFrame.sourceLabelF;
     /** 来源 */
     CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + HWStatusCellBorderW;
